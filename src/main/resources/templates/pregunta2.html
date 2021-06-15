@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css">
+
+  
+  <style>
+    .titulo{
+        text-align: center;
+        background-color: lightblue;
+        border-style: solid;
+        border-color:lightskyblue;
+        border-radius: 0.5em;
+        padding: 0.5em;
+    }
+
+    form{
+        background-color: lightgreen;
+        padding: 1em;
+        width: 37%;
+        border-radius: 0.5em;
+        margin-left: 30%;
+    }
+
+    body{
+        background-color: lightgrey;
+    }
+
+    .tituloPregunta{
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="titulo">Quiz Harry Potter</h1>
+
+
+  <h2 class="tituloPregunta">Pregunta 2: Tus Cualidades</h2>
+
+<form>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Valor
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="2" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Fuerza
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="3" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Audacia 
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="4" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Caballerosidad
+  </label>
+</div>
+</form>
+</body>
+<script src="/js/comprobarCheckbox"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</html>

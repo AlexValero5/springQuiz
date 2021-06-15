@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+      .titulo{
+        text-align: center;
+        background-color: lightblue;
+        border-style: solid;
+        border-color:lightskyblue;
+        border-radius: 0.5em;
+        padding: 0.5em;
+    }
+    .tituloPregunta{
+      text-align: center;
+    }
+    body{
+      background-color: lightgrey;
+    }
+    form{
+      text-align: center;
+      background-color: lightseagreen;
+      padding: 0.5em;
+      border-color: navajowhite;
+      border-style: double;
+      border-radius: 1em;
+      width: 40%;
+      margin-left: 30%;
+    }
+    #boton{
+      
+      text-decoration: none;
+      border-color: green;
+      border-style: solid;
+      padding: 0.2em;                                        
+      border-radius: 0.4em;
+      background-color: grey;
+    }
+  </style>
+</head>
+
+<body>
+    <h1 class="titulo">Quiz Harry Potter</h1>
+
+    <h2 class="tituloPregunta">Pregunta 1</h2>
+
+
+    <form th:action="@{/preguntas/primeraPregunta}" method="POST">
+      <p>Mes de Nacimiento: <input type="number" name="mesNacimiento" id="mesNacimiento" min="1" max="12"></p>
+
+      <p>Año de Nacimiento: <input type="number" name="anioNacimiento" id="anioNacimiento" ></p>
+       <p><button type="submit" id="boton"><span>Siguiente Pregunta</span> </button></p> 
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Theme opcional -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  
+  <style>
+    .titulo{
+        text-align: center;
+        background-color: lightblue;
+        border-style: solid;
+        border-color:lightskyblue;
+        border-radius: 0.5em;
+        padding: 0.5em;
+    }
+
+    form{
+        background-color: lightgreen;
+        padding: 1em;
+        width: 37%;
+        border-radius: 0.5em;
+        margin-left: 30%;
+    }
+    form label{
+      padding: 0.5em;
+    }
+
+    form div{
+      text-align: center;
+    }
+
+    body{
+        background-color: lightgrey;
+    }
+
+    .tituloPregunta{
+      text-align: center;
+    }
+
+    #pie{
+        margin: 1em;
+        background-color: lightblue;
+        border-color:lightskyblue;
+        border-radius: 0.5em;
+        padding: 0.5em;
+        text-align: center;
+    }
+    #boton{
+      
+      text-decoration: none;
+      border-color: green;
+      border-style: solid;
+      padding: 0.2em;                                        
+      border-radius: 0.4em;
+      background-color: grey;
+      text-align: center;
+      margin-left: 35%;
+    }
+    select{
+    padding:0.5em;
+    border-radius: 0.5em;
+    margin-left: 32%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="titulo">Quiz Harry Potter</h1>
+
+
+  <h2 class="tituloPregunta">Pregunta 6</h2>
+
+  <form th:action="@{/preguntas/sextaPregunta}" method="post">
+    <fieldset>
+        <legend>Elige un presonaje entre Ron,Cedric,Padma o Draco</legend>
+        <label>
+            <input type="text" name="nombre" placeholder="Escriba aquí"> Nombre Presonaje
+        </label>
+        
+      <p><button type="submit" id="boton"><span>Siguiente Pregunta</span> </button></p>
+    </fieldset>
+  </form>
+
+<div id="pie">
+  <span>Elija el personaje que más le guste de estos 4</span>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--Insertamos el archivo JS compilado y comprimido -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>

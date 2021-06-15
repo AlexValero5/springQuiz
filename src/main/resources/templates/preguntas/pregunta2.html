@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Theme opcional -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  
+  <style>
+    .titulo{
+        text-align: center;
+        background-color: lightblue;
+        border-style: solid;
+        border-color:lightskyblue;
+        border-radius: 0.5em;
+        padding: 0.5em;
+    }
+
+    form{
+        background-color: lightgreen;
+        padding: 1em;
+        width: 37%;
+        border-radius: 0.5em;
+        margin-left: 30%;
+    }
+    form label{
+      padding: 0.5em;
+    }
+
+    form div{
+      text-align: center;
+    }
+
+    body{
+        background-color: lightgrey;
+    }
+
+    .tituloPregunta{
+      text-align: center;
+    }
+
+    #pie{
+        margin: 1em;
+        background-color: lightblue;
+        border-color:lightskyblue;
+        border-radius: 0.5em;
+        padding: 0.5em;
+        text-align: center;
+    }
+    #boton{
+      
+      text-decoration: none;
+      border-color: green;
+      border-style: solid;
+      padding: 0.2em;                                        
+      border-radius: 0.4em;
+      background-color: grey;
+      text-align: center;
+      margin-left: 35%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="titulo">Quiz Harry Potter</h1>
+
+
+  <h2 class="tituloPregunta">Pregunta 2: Tus Cualidades</h2>
+
+<form th:action="@{/preguntas/segundaPregunta}" method="POST">
+    <div >
+      <input type="checkbox" value="1" id="valor" name="valor">
+      <label  for="valor">
+        Valor
+      </label>
+    </div>
+    <div >
+      <input  type="checkbox" value="2" id="fuerza" name="fuerza">
+      <label  for="fuerza">
+        Fuerza
+      </label>
+    </div>
+    <div >
+      <input  type="checkbox" value="3" id="justicia" name="justicia">
+      <label  for="justicia">
+        Justicia
+      </label>
+    </div>
+    <div >
+      <input  type="checkbox" value="4" id="lealtad" name="lealtad">
+      <label  for="lealtad">
+        Lealtad
+      </label>
+    </div>
+
+    <div >
+      <input type="checkbox" value="1" id="creatividad" name="creatividad">
+      <label  for="creatividad">
+        Creatividad
+      </label>
+    </div>
+    <div >
+      <input  type="checkbox" value="2" id="erudiccion" name="erudiccion">
+      <label  for="erudiccion">
+        Erudicción
+      </label>
+    </div>
+    <div >
+      <input  type="checkbox" value="3" id="ambicion" name="ambicion">
+      <label  for="ambicion">
+        Ambicion
+      </label>
+    </div>
+    <div >
+      <input  type="checkbox" value="4" id="determinacion" name="determinacion">
+      <label  for="determinacion">
+        Determinación
+      </label>
+    </div>
+    <p><button type="submit" id="boton"><span>Siguiente Pregunta</span> </button></p> 
+</form>
+
+<div id="pie">
+  <span>Selecciona todas tus cualidades</span>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--Insertamos el archivo JS compilado y comprimido -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>

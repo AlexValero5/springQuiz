@@ -1,0 +1,12 @@
+drop database if exists springquiz;
+create database springquiz;
+
+use springquiz;
+
+CREATE TABLE RESULTADO
+(
+	ID_RESULTADO BIGINT NOT NULL AUTO_INCREMENT,
+	CASA_FINAL VARCHAR(40) NOT NULL,
+	NOMBRE VARCHAR(40) NOT NULL,
+	PRIMARY KEY (ID_RESULTADO)
+);

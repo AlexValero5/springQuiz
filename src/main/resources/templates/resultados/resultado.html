@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  
+  <!-- <link rel="stylesheet" href="D:\Eclipse\trabajos\Trabajos\SpringQuiz\src\main\resources\static\css\estilos.css"> -->
+  <style>
+        .titulo{
+        text-align: center;
+        background-color: lightblue;
+        border-style: solid;
+        border-color:lightskyblue;
+        border-radius: 0.5em;
+        padding: 0.5em;
+    }
+
+    body{
+        background-color: lightgrey;
+    }
+
+    #formNombre{
+        margin-left: 33%;
+    }
+
+    form{
+        background-color: lightgreen;
+        padding: 1em;
+        width: 37%;
+        border-radius: 0.5em;
+    }
+    form input{
+        font-size: 1.5em;
+        padding: 0.5em;
+    }
+
+    #botonComienzo{
+        border-style: dashed;
+        border-radius: 0.5em;
+        padding: 0.5em;
+        margin-left: 26%;
+        margin-top: 0.5em;
+    }
+    #pie{
+        margin: 1em;
+        background-color: lightblue;
+        border-color:lightskyblue;
+        border-radius: 0.5em;
+        padding: 0.5em;
+        text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="titulo">Quiz Harry Potter</h1>
+  
+  <h2>Resultado Final</h2>
+
+  <table class="table">
+  	<thead class="thead-dark">
+  		<tr>
+  			<td scope="col">Nombre Usuario</td>
+  			<td scope="col">Resultado Casa</td>
+  			<td scope="col">Imagen de la Casa</td>
+  		</tr>
+  	</thead>
+  	
+  	<tbody>
+  		<tr>
+  			<td><span th:text="${result.nombreUser}">Nombre</span></td>
+  			<td><span th:text="${result.casa}">Nombre</span></td>
+  			<td><img th:src="@{/images/{casa}(casa=${result.casa})}" width="80px" height="80px"></img></td>
+  		</tr>
+  	</tbody>
+  	
+  </table>
+
+  <div id="pie">
+     <p>
+     <a  th:href="@{/inicio}" class="nav-link active" aria-current="page">Volver a Jugar</a>
+     <a  th:href="@{/resultados/ultimosResultados}" class="nav-link active" aria-current="page">Mostrar Ultimos 5 usuarios</a>
+     
+     </p>
+  </div>
+</body>
+</html>
